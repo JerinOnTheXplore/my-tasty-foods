@@ -16,7 +16,11 @@ const Categories = ({categoriesPromise}) => {
         <div>
            <h2>Available Foods:{categories.categories.length}</h2>
            <h2>So far oredered:{orderedCategories.length}</h2>
-
+            <ol>
+             {
+                orderedCategories.map(category=><li>{category.strCategory}</li>)
+             }   
+            </ol> 
            <div className="categories">
            {
             categories.categories.map(category => <Category 
